@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Snake!</title>
+    <script src="jquery-2.1.1.js"></script>
+    <script src="underscore-min.js"></script>
+    <script src="snake.js"></script>
+		<script src="snake-view.js"></script>
+		<link rel="stylesheet" href="snakecss.css" type="text/css">
+  </head>
+  <body>
+    <h1>Let's play Snake!</h1>
+    <h3>Eat dem apples.</h3>
+		<div id="grid"></div>
+    <form>
+      <input type="submit" name="" id="color_button" value="Play!">
+    </form>
+    <script>
+			var $grid = $("#grid");
+			var b = new SnakeGame.View($grid);
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,49 @@
+h1, h3 {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+body > * {
+}
+
+#grid {
+  width: 525px;
+	height: 525px;
+  margin: 0px auto;
+  outline: burlywood solid 10px;
+}
+
+#grid:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+form {
+  margin-top: 40px;
+}
+
+input {
+  margin: 0px auto;
+  display: block;
+  
+}
+
+.spot {
+  outline: grey solid 1px;
+	background:black;
+  width: 15px;
+  height: 15px;
+  float: left;
+}
+
+
+.snake {
+  background: red solid 1px;
+  width: 15px;
+  height: 15px;
+  float: left;
+}
+
+
+
