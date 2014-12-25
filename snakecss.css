@@ -10,7 +10,9 @@ body > * {
 
     font-family: 'Source Code Pro', sans-serif;
 }
-
+body{
+  min-width: 800px;
+}
 input{
   background: red;
   color:white;
@@ -48,9 +50,9 @@ input {
 }
 
 .scorecount{
-  position:relative;
-  top:-800px;
-  left:950px;
+  position: relative;
+  float: right;
+  top:-900px;
 }
 
 .gameover{
@@ -99,6 +101,7 @@ input {
   text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
   font-family: 'Source Code Pro', sans-serif;
 }
+
 
 .apple {
   background: red;
