@@ -23,7 +23,12 @@
 			}
 		});
 	};
-	
+
+	View.prototype.displayCounter = function(){
+		var value = this.board.counter;
+		$('.counter').val("asfasfasasafas");
+	};
+
 	var step = function() {
 		
 		if (this.board.gameOver()){
@@ -56,7 +61,7 @@
 			}
 		}
 
-
+		this.displayCounter();
 		this.$el.html(megaString);
 	};
 	

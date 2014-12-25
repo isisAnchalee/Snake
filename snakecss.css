@@ -47,7 +47,9 @@ input {
   height: 15px;
   float: left;
 }
-
+.counter{
+  font-size:5em;
+}
 #gameOver{
 	font-family:helvetica;
 	background:white;
@@ -71,4 +73,9 @@ input {
   float: left;
 }
 
-
+.rock{
+  background:gray;
+  width: 15px;
+  height: 15px;
+  float: left;
+}
