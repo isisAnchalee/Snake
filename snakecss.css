@@ -30,13 +30,17 @@ form {
 input {
   margin: 0px auto;
   display: block;
-  
+}
+
+.scorecount{
+
 }
 
 .gameover{
   position: relative;
   top:-85px;
 }
+
 .spot {
   outline: grey solid 1px;
 	background:black;
@@ -60,6 +64,7 @@ input {
   top:-230px;
   left:60px;
 }
+
 #gameOver{
 	font-family:helvetica;
 	background:white;
@@ -69,12 +74,13 @@ input {
 	font-size:80px;
 	text-align: center;
 	line-height:200px;
-	width:700px;
-	height:200px;
+	width:730px;
+	height:213px;
 	border: 2px solid black;
 	z-index:10;
-	display:none;
+  visibility: hidden;
   font-family: 'Source Code Pro', sans-serif;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
 }
 
 .apple {

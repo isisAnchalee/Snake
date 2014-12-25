@@ -41,7 +41,7 @@
 	};
 	
 	View.prototype.renderGameOver = function(){
-		var $overDiv = $('#gameOver');
+		var $overDiv = $('#gameOver').addClass("slideDown");
 		$overDiv.show();
 	}
 	
