@@ -1,9 +1,24 @@
 h1, h3 {
-  font-family: 'Source Code Pro', sans-serif;
   text-align: center;
 }
 
+h1{
+  margin-bottom:-10px;
+}
+
 body > * {
+
+    font-family: 'Source Code Pro', sans-serif;
+}
+
+input{
+  background: red;
+  color:white;
+  padding:4 10px;
+  border: 1px solid black;
+  font-size: 1.2em;
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 #grid {
@@ -33,7 +48,9 @@ input {
 }
 
 .scorecount{
-
+  position:relative;
+  top:-800px;
+  left:950px;
 }
 
 .gameover{
@@ -79,8 +96,8 @@ input {
 	border: 2px solid black;
 	z-index:10;
   visibility: hidden;
-  font-family: 'Source Code Pro', sans-serif;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
+  font-family: 'Source Code Pro', sans-serif;
 }
 
 .apple {
@@ -89,5 +106,4 @@ input {
   height: 15px;
   float: left;
 }
-
 

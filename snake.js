@@ -104,6 +104,7 @@
 	    if (that.head().equals(apple.position)) {
 	      that.growTurns += 3;
 				that.removeApple(apple, i)
+        that.board.counter += 1;
 	      return true;
 	    } else {
 	      return false;
@@ -120,6 +121,7 @@
     this.apples = [ new Apple(this), new Apple(this) ]
     this.snake = new Snake(this);
     this.rocks = [];
+    this.counter = 0;
   };
 
 	Board.prototype.gameOver = function(){

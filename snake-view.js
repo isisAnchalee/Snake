@@ -26,11 +26,10 @@
 
 	View.prototype.displayCounter = function(){
 		var value = this.board.counter;
-		$('.counter').val("asfasfasasafas");
+		$('.scorecount').html("Current Score: " + value);
 	};
 
 	var step = function() {
-		
 		if (this.board.gameOver()){
 			this.board.snake.move();
 			this.renderView();
@@ -42,6 +41,7 @@
 	
 	View.prototype.renderGameOver = function(){
 		var $overDiv = $('#gameOver').addClass("slideDown");
+		$('.finalscore').text("Final Score:" + this.board.counter);
 		$overDiv.show();
 	}
 	
