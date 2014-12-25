@@ -25,10 +25,7 @@
     this.replace();
   };
 
-  var Rock = SnakeGame.Rock = function(coord, board){
-    this.board = board;
-    this.position = coord;
-  }
+  var Stone = SnakeGame.Stone = function(board){}
 
   Apple.prototype.replace = function () {
     var x = Math.floor(Math.random() * 35);
@@ -103,22 +100,15 @@
 	
   Snake.prototype.eatApple = function () {
 		var that = this;
-
 		this.board.apples.forEach(function(apple, i){
 	    if (that.head().equals(apple.position)) {
 	      that.growTurns += 3;
-				that.addRock(apple, i)
+				that.removeApple(apple, i)
 	      return true;
 	    } else {
 	      return false;
 	    }
 		});
-  };
-
-  Snake.prototype.addRock = function(apple, i){
-    this.board.counter += 1;
-    this.board.rocks.push(new Rock(apple.position, this.board));
-    this.removeApple(apple, i);
   };
 
   Snake.prototype.removeApple = function (apple, i) {
@@ -130,12 +120,11 @@
     this.apples = [ new Apple(this), new Apple(this) ]
     this.snake = new Snake(this);
     this.rocks = [];
-    this.counter = 0;
   };
 
 	Board.prototype.gameOver = function(){
 		var currentPos = this.snake.head();
-		
+
 		return this.validPosition(currentPos)
 	}
 
@@ -163,10 +152,7 @@
 		this.apples.forEach(function (apple){
 			 grid[apple.position.i][apple.position.j] = "a";
 		});
-
-    this.rocks.forEach(function (rock){
-       grid[rock.position.i][rock.position.j] = "r";
-    });
+    
     var gridString = grid.map(function (row) {
       return row.join("");
     }).join("\n");
@@ -175,7 +161,7 @@
   };
 	
   Board.prototype.validPosition = function (coord) {
-    return (coord.i >= 0) && (coord.i <= 35) && (coord.j >= 0) && (coord.j <= 35);
-  };
 
+    return coord && (coord.i >= 0) && (coord.i <= 35) && (coord.j >= 0) && (coord.j <= 35) && (coord !== undefined);
+  };
 })();

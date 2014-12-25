@@ -47,15 +47,13 @@ input {
   height: 15px;
   float: left;
 }
-.counter{
-  font-size:5em;
-}
+
 #gameOver{
 	font-family:helvetica;
 	background:white;
 	margin: 0 auto;
-	position:absolute;
-	left: 230px;
+	position:relative;
+  top:-500px;
 	font-size:80px;
 	text-align: center;
 	line-height:200px;
@@ -73,9 +71,4 @@ input {
   float: left;
 }
 
-.rock{
-  background:gray;
-  width: 15px;
-  height: 15px;
-  float: left;
-}
+
