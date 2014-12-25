@@ -1,5 +1,5 @@
 h1, h3 {
-  font-family: sans-serif;
+  font-family: 'Source Code Pro', sans-serif;
   text-align: center;
 }
 
@@ -33,6 +33,10 @@ input {
   
 }
 
+.gameover{
+  position: relative;
+  top:-85px;
+}
 .spot {
   outline: grey solid 1px;
 	background:black;
@@ -48,6 +52,14 @@ input {
   float: left;
 }
 
+.finalscore{
+  font-size: 30px;
+  z-index: 1000;
+  color:red;
+  position: relative;
+  top:-230px;
+  left:60px;
+}
 #gameOver{
 	font-family:helvetica;
 	background:white;
@@ -57,11 +69,12 @@ input {
 	font-size:80px;
 	text-align: center;
 	line-height:200px;
-	width:600px;
+	width:700px;
 	height:200px;
 	border: 2px solid black;
 	z-index:10;
 	display:none;
+  font-family: 'Source Code Pro', sans-serif;
 }
 
 .apple {

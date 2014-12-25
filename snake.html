@@ -8,6 +8,7 @@
     <script src="snake.js"></script>
 		<script src="snake-view.js"></script>
 		<link rel="stylesheet" href="snakecss.css" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <h1>Let's play Snake!</h1>
@@ -19,7 +20,8 @@
     <form>
       <input type="submit" name="" id="color_button" value="Play!">
     </form>
-    <div id="gameOver">Game Over!!!</div>
+    <div id="gameOver"><img src="http://cdn.grumpycats.com/wp-content/uploads/2012/09/GC-Gravatar-copy.png"><span class="gameover">Game Over.</span>
+      <div class="finalscore">final score: 0</div></div>
     <script>
 			var $grid = $("#grid");
 			var b = new SnakeGame.View($grid);
