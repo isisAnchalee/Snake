@@ -51,6 +51,8 @@
 				megaString += "<div class=\"snake\"></div>"
 			} else if (boardString[i] === "a"){
 				megaString += "<div class=\"apple\"></div>"
+			} else if (boardString[i] === 'r'){
+				megaString += "<div class=\"rock\"></div>"
 			}
 		}
 

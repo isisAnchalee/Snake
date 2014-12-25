@@ -25,12 +25,17 @@
     this.replace();
   };
 
+  var Stone = SnakeGame.Stone = function(coord, board){
+    this.board = board;
+    this.position = coord;
+  }
+
   Apple.prototype.replace = function () {
     var x = Math.floor(Math.random() * 35);
     var y = Math.floor(Math.random() * 35);
 
     this.position = new Coord(x,y);
-  }
+  };
 
   var Snake = SnakeGame.Snake = function (board) {
     this.dir = "N";
@@ -101,12 +106,16 @@
 		this.board.apples.forEach(function(apple, i){
 	    if (that.head().equals(apple.position)) {
 	      that.growTurns += 3;
-				that.removeApple(apple, i)
+				that.addStone(apple)
 	      return true;
 	    } else {
 	      return false;
 	    }
 		});
+  };
+
+  Snake.prototype.addStone = function(apple){
+
   };
 
   Snake.prototype.removeApple = function (apple, i) {
@@ -117,6 +126,7 @@
   var Board = SnakeGame.Board = function () {
     this.apples = [ new Apple(this), new Apple(this) ]
     this.snake = new Snake(this);
+    this.rocks = [];
   };
 
 	Board.prototype.gameOver = function(){
@@ -148,8 +158,8 @@
 		
 		this.apples.forEach(function (apple){
 			 grid[apple.position.i][apple.position.j] = "a";
-		})
-   
+		});
+    
     var gridString = grid.map(function (row) {
       return row.join("");
     }).join("\n");
