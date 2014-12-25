@@ -13,6 +13,10 @@ body > * {
   outline: burlywood solid 10px;
 }
 
+.wrapper{
+	position: relative;
+}
+
 #grid:after {
   content: "";
   clear: both;
@@ -37,13 +41,34 @@ input {
   float: left;
 }
 
-
 .snake {
-  background: red solid 1px;
+  background: green;
   width: 15px;
   height: 15px;
   float: left;
 }
 
+#gameOver{
+	font-family:helvetica;
+	background:white;
+	margin: 0 auto;
+	position:absolute;
+	left: 230px;
+	font-size:80px;
+	text-align: center;
+	line-height:200px;
+	width:600px;
+	height:200px;
+	border: 2px solid black;
+	z-index:10;
+	display:none;
+}
+
+.apple {
+  background: red;
+  width: 15px;
+  height: 15px;
+  float: left;
+}
 
 

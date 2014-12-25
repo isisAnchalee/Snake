@@ -5,8 +5,7 @@
 		this.$el = el;
 		this.board = new SnakeGame.Board();
 		this.registerEvents();
-		
-		setInterval(step.bind(this), 500);
+		this.session = setInterval(step.bind(this), 100);
 		
 	};
 	
@@ -26,22 +25,31 @@
 	};
 	
 	var step = function() {
-		this.board.snake.move();
-		this.board.render();
-		this.renderView();
 		
+		if (this.board.gameOver()){
+			this.board.snake.move();
+			this.renderView();
+		} else {
+			this.renderGameOver();
+			clearInterval(this.session)
+		}
 	};
+	
+	View.prototype.renderGameOver = function(){
+		var $overDiv = $('#gameOver');
+		$overDiv.show();
+	}
 	
 	View.prototype.renderView = function() {
 		var megaString = "";
-		var things = this.board.stringBoard;
+		var boardString = this.board.render();
 
-		for (var i = 0; i < things.length; i++){
-			if (things[i] === "."){
+		for (var i = 0; i < boardString.length; i++){
+			if (boardString[i] === "."){
 				megaString += "<div class=\"spot\"></div>"
-			} else if (things[i] === "s"){
+			} else if (boardString[i] === "s"){
 				megaString += "<div class=\"snake\"></div>"
-			} else if (things[i] === "a"){
+			} else if (boardString[i] === "a"){
 				megaString += "<div class=\"apple\"></div>"
 			}
 		}
